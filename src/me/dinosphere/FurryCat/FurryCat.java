@@ -27,7 +27,9 @@ public class FurryCat extends JavaPlugin{
 		
 		PluginDescriptionFile pdfFile = this.getDescription();
 		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting CadiaCore..");
-		oxygenLevel.dinosaur();
+		
+		// Not Needed! Outdated Technique
+		//oxygenLevel.dinosaur();
 	}
 		
 		
