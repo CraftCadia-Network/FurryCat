@@ -26,6 +26,7 @@ public class oxygenLevel extends JavaPlugin{
 			final CommandSender sender = null;
 			final Player player = (Player) sender;
 			
+		if(player.getRemainingAir() < 1) {	
 			try {
 		        while (true) {
 		            
@@ -35,8 +36,12 @@ public class oxygenLevel extends JavaPlugin{
 		        e.printStackTrace();
 		    }
 				
+			}else{
+				return;
 			}
+		}
 }
+
 		
 
 			
