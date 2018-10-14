@@ -22,6 +22,7 @@ public class oxygenLevel extends JavaPlugin{
 		public static void dinosaur() {		
 			
 			int delay = 1000;
+			int airlevel = 10;
 			
 			final CommandSender sender = null;
 			final Player player = (Player) sender;
@@ -29,7 +30,7 @@ public class oxygenLevel extends JavaPlugin{
 		if(player.getRemainingAir() < 1) {	
 			try {
 		        while (true) {
-		            player.setRemainingAir(-1);
+		            player.setRemainingAir(airlevel - 1);
 		            Thread.sleep(delay);
 		        }
 		    } catch (InterruptedException e) {
