@@ -4,7 +4,8 @@ import java.util.logging.Logger;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.dinosphere.FurryCat.oxygenHandler.oxygenLevel;
+import me.dinosphere.FurryCat.oxygenHandler.actionbarOxygenHandler;
+
 
 public class FurryCat extends JavaPlugin{
 
@@ -28,15 +29,9 @@ public class FurryCat extends JavaPlugin{
 		PluginDescriptionFile pdfFile = this.getDescription();
 		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting Fallout..");
 		
-		// Now changed to using Player XP for the Oxygen meter.
-		try {
-			oxygenLevel.dinosaur(null, null, null, null);
-		} catch (InterruptedException e) {
-			// i didn't make this xD
-			e.printStackTrace();
-		}
-	}
+		actionbarOxygenHandler.hairyDog();
 		
 		
 	
+	}
 }
