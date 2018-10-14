@@ -28,8 +28,8 @@ public class FurryCat extends JavaPlugin{
 		PluginDescriptionFile pdfFile = this.getDescription();
 		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting CadiaCore..");
 		
-		// Not Needed! Outdated Technique
-		//oxygenLevel.dinosaur();
+		// Now changed to using Player XP.
+		oxygenLevel.dinosaur();
 	}
 		
 		

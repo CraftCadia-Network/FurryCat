@@ -21,16 +21,18 @@ public class oxygenLevel extends JavaPlugin{
 		@SuppressWarnings("null")
 		public static void dinosaur() {		
 			
-			int delay = 1000;
-			int airlevel = 10;
+
 			
 			final CommandSender sender = null;
 			final Player player = (Player) sender;
 			
-		if(player.getRemainingAir() < 1) {	
+			int delay = 1000;
+			int subtractionRate = 1;
+			
+		if(player.getTotalExperience() > 10) {	
 			try {
 		        while (true) {
-		            player.setRemainingAir(airlevel - 1);
+		            player.setExp(player.getTotalExperience() - subtractionRate);
 		            Thread.sleep(delay);
 		        }
 		    } catch (InterruptedException e) {
