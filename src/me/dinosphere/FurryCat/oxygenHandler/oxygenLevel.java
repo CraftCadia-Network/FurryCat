@@ -18,12 +18,11 @@ public class oxygenLevel extends JavaPlugin{
 	
 
 
-		public static void dinosaur() throws InterruptedException {		
-			
+		public static void dinosaur(CommandSender sender, Command command, String label, String[] args) throws InterruptedException {		
+		
+			Player player = (Player) sender;
 
-			
-			final CommandSender sender = null;
-			final Player player = (Player) sender;
+		
 			
 			int delay = 1000;
 			int subtractionRate = 1;

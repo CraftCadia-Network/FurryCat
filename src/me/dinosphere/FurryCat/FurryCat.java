@@ -30,7 +30,7 @@ public class FurryCat extends JavaPlugin{
 		
 		// Now changed to using Player XP for the Oxygen meter.
 		try {
-			oxygenLevel.dinosaur();
+			oxygenLevel.dinosaur(null, null, null, null);
 		} catch (InterruptedException e) {
 			// i didn't make this xD
 			e.printStackTrace();
