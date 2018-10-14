@@ -18,8 +18,7 @@ public class oxygenLevel extends JavaPlugin{
 	
 
 
-		@SuppressWarnings("null")
-		public static void dinosaur() {		
+		public static void dinosaur() throws InterruptedException {		
 			
 
 			
@@ -30,20 +29,18 @@ public class oxygenLevel extends JavaPlugin{
 			int subtractionRate = 1;
 			
 		if(player.getTotalExperience() <= 10) {	
-			try {
 		        while (true) {
 		            player.setExp(player.getTotalExperience() - subtractionRate);
 		            Thread.sleep(delay);
 		        }
-		    } catch (InterruptedException e) {
-		        e.printStackTrace();
-		    }
+		    }		    
+		}
 				
-			}else{
-				return;
+		{
+			
 			}
 		}
-}
+
 
 		
 

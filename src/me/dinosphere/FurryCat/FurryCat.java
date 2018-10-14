@@ -29,7 +29,12 @@ public class FurryCat extends JavaPlugin{
 		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting Fallout..");
 		
 		// Now changed to using Player XP for the Oxygen meter.
-		oxygenLevel.dinosaur();
+		try {
+			oxygenLevel.dinosaur();
+		} catch (InterruptedException e) {
+			// i didn't make this xD
+			e.printStackTrace();
+		}
 	}
 		
 		
