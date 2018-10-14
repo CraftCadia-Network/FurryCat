@@ -1,0 +1,8 @@
+name: FurryCatasaurus
+main: me.dinosphere.FurryCat.FurryCat
+version: 1.1
+description: >
+             Core Plugin developed by Developers at Cadia Network.
+commands:
+  ohnoes:
+    description: Tells The User the Discord.
