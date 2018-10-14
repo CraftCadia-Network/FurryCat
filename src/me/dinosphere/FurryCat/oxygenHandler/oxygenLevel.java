@@ -29,7 +29,7 @@ public class oxygenLevel extends JavaPlugin{
 		if(player.getRemainingAir() < 1) {	
 			try {
 		        while (true) {
-		            
+		            player.setRemainingAir(-1);
 		            Thread.sleep(delay);
 		        }
 		    } catch (InterruptedException e) {
