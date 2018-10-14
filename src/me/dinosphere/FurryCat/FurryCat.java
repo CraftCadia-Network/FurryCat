@@ -26,9 +26,9 @@ public class FurryCat extends JavaPlugin{
 	public void onEnable() {
 		
 		PluginDescriptionFile pdfFile = this.getDescription();
-		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting CadiaCore..");
+		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting Fallout..");
 		
-		// Now changed to using Player XP.
+		// Now changed to using Player XP for the Oxygen meter.
 		oxygenLevel.dinosaur();
 	}
 		

@@ -29,7 +29,7 @@ public class oxygenLevel extends JavaPlugin{
 			int delay = 1000;
 			int subtractionRate = 1;
 			
-		if(player.getTotalExperience() > 10) {	
+		if(player.getTotalExperience() <= 10) {	
 			try {
 		        while (true) {
 		            player.setExp(player.getTotalExperience() - subtractionRate);
