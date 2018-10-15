@@ -4,7 +4,8 @@ import java.util.logging.Logger;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.dinosphere.FurryCat.oxygenHandler.actionbarOxygenHandler;
+import me.dinosphere.FurryCat.oxygenHandler.oxygenChat;
+import me.dinosphere.FurryCat.oxygenHandler.oxygenLevel;
 
 
 public class FurryCat extends JavaPlugin{
@@ -29,7 +30,7 @@ public class FurryCat extends JavaPlugin{
 		PluginDescriptionFile pdfFile = this.getDescription();
 		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting Fallout..");
 		
-		actionbarOxygenHandler.hairyDog();
+		oxygenChat.purringPowwow(null, null, null, null);
 		
 		
 	
