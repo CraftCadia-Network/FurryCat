@@ -30,16 +30,6 @@ public class FurryCat extends JavaPlugin{
 	// Console Message (When Turned On)
 	@Override
 	public void onEnable() {
-		
-		PluginManager pm = Bukkit.getPluginManager();
-		pm.registerEvents(new ActionBar(null), this);
-		
-		PluginDescriptionFile pdfFile = this.getDescription();
-		FurryCat.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() +  "has been enabled. Starting Fallout..");
-		
-
-		
-		
-	
+			
 	}
 }
