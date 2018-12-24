@@ -3,6 +3,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="Jars/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sam Taber/Desktop/FastAsyncWorldEdit-bukkit-18.10.17-e26cdc6-1226-21.5.13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
