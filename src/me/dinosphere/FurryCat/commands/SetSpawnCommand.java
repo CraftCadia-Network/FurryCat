@@ -20,10 +20,11 @@ public class SetSpawnCommand implements CommandExecutor{
 		if(label.equalsIgnoreCase("setspawn")) {
 			
 			if(player.hasPermission("fallout.setspawn")) {
-				
-				plugin.getConfig().set("spawn.x", player.getLocation().getBlockX());
-				plugin.getConfig().set("spawn.y", player.getLocation().getBlockY());
-				plugin.getConfig().set("spawn.z", player.getLocation().getBlockZ());
+				plugin.getConfig().set("spawn.world", player.getLocation().getWorld());
+				plugin.getConfig().set("spawn.x", player.getLocation().getX());
+				plugin.getConfig().set("spawn.y", player.getLocation().getY());
+				plugin.getConfig().set("spawn.z", player.getLocation().getZ());
+				plugin.saveConfig();
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "Spawn has been set.");
 			}
 			
