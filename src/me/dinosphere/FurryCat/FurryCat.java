@@ -2,6 +2,7 @@ package me.dinosphere.FurryCat;
 
 import java.util.logging.Logger;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -26,23 +27,27 @@ public class FurryCat extends JavaPlugin implements Listener{
 	public void onDisable() {
 		
 		PluginDescriptionFile pdfFile = this.getDescription();
-		FurryCat.logger.info(pdfFile.getName() + " has been disabled.");
+		getServer().getConsoleSender().sendMessage(ChatColor.RED + "--------------------oOo--------------------\n\nFurryCat Disabled..\n\n--------------------oOo--------------------");
 		
 	}
 	// Console Message (When Turned On)
 	@Override
 	public void onEnable() {
-		PluginDescriptionFile pdfFile = this.getDescription();
-		FurryCat.logger.info(pdfFile.getName() + " has been enabled.");
-
+		plugin = this;
+		this.getConfig().options().copyDefaults(true);
+		this.saveConfig();
+		this.getServer().getPluginManager().registerEvents(this, this);
+		cmdExecutor();
+		this.saveDefaultConfig();
+		getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "--------------------oOo--------------------\n\nFurryCat Loaded.\n\n--------------------oOo--------------------");
 		
 	}
-	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String args[]) {
+	public void cmdExecutor() {
 		
 		this.getCommand("heal").setExecutor((CommandExecutor)new HealCommand());
 		this.getCommand("setspawn").setExecutor((CommandExecutor)new SpawnCommand());
 		this.getCommand("spawn").setExecutor((CommandExecutor)new SpawnCommand());
-		return false;
+		
 	}
 	
 }
