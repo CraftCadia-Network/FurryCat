@@ -1,0 +1,19 @@
+spawn:
+  world:
+    PVP: true
+    ambientSpawnLimit: 15
+    animalSpawnLimit: 15
+    autoSave: true
+    difficulty: EASY
+    environment: NORMAL
+    fullTime: 33825
+    keepSpawnInMemory: true
+    monsterSpawnLimit: 70
+    tunderDuration: 74002
+    thundering: true
+    time: 9825
+    waterAnimalSpawnLimit: 5
+    weatherDuration: 31922
+  x:
+  y:
+  z:
