@@ -2,13 +2,18 @@ package me.dinosphere.FurryCat.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.dinosphere.FurryCat.FurryCat;
+
 public class SpawnCommand implements CommandExecutor{
 
+	public static FurryCat plugin;
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(!(sender instanceof Player)) {
@@ -19,15 +24,7 @@ public class SpawnCommand implements CommandExecutor{
 		
 		Player player = (Player) sender;
 		
-		if(label.equalsIgnoreCase("setspawn")) {
-			
-			if(player.hasPermission("fallout.setspawn")) {
-				
-				player.getWorld().setSpawnLocation(player.getLocation().getBlockX(), player.getLocation().getBlockZ(), player.getLocation().getBlockY());
-				player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "Spawn has been set.");
-			}
-			
-		}
+		
 		
 		if(label.equalsIgnoreCase("spawn")) {
 			
@@ -35,7 +32,8 @@ public class SpawnCommand implements CommandExecutor{
 				
 				if(args.length == 0) {
 					
-					player.teleport(player.getWorld().getSpawnLocation());
+					int x = plugin.getConfig().getInt("spawn.x"), y = plugin.getConfig().getInt("spawn.y"), z = plugin.getConfig().getInt("spawn.z");
+					player.teleport(new Location(player.getWorld(), x, y, z));
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "Sending you to spawn.");
 					
 				}else if(args.length == 1) {
