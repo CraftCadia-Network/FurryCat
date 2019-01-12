@@ -38,22 +38,13 @@ public class SpawnCommand implements CommandExecutor{
 				}
 				
 				if(args.length == 0) {
-					
-					World w = Bukkit.getServer().getWorld(plugin.getConfig().getString("spawn.world"));
-					double x = plugin.getConfig().getDouble("spawn.x");
-					double y = plugin.getConfig().getDouble("spawn.y");
-					double z = plugin.getConfig().getDouble("spawn.z");
-					player.teleport(new Location(w, x, y, z));
+					player.teleport(player.getWorld().getSpawnLocation());
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "Sending you to spawn.");
 					
 				}else if(args.length == 1) {
 
-					World w = Bukkit.getServer().getWorld(plugin.getConfig().getString("spawn.world"));
-					double x = plugin.getConfig().getDouble("spawn.x");
-					double y = plugin.getConfig().getDouble("spawn.y");
-					double z = plugin.getConfig().getDouble("spawn.z");
 					Player targetPlayer = Bukkit.getServer().getPlayer(args[0]);
-					targetPlayer.teleport(new Location(w, x, y, z));
+					targetPlayer.teleport(player.getWorld().getSpawnLocation());
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.YELLOW + player.getName() + ChatColor.GREEN + " has sent you to spawn.");
 					
 				}
