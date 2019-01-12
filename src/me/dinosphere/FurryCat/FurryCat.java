@@ -10,6 +10,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.dinosphere.FurryCat.commands.HealCommand;
+import me.dinosphere.FurryCat.commands.SpawnCommand;
 
 
 
@@ -39,7 +40,8 @@ public class FurryCat extends JavaPlugin implements Listener{
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String args[]) {
 		
 		this.getCommand("heal").setExecutor((CommandExecutor)new HealCommand());
-		
+		this.getCommand("setspawn").setExecutor((CommandExecutor)new SpawnCommand());
+		this.getCommand("spawn").setExecutor((CommandExecutor)new SpawnCommand());
 		return false;
 	}
 	
