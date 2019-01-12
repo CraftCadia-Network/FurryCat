@@ -31,11 +31,6 @@ public class SpawnCommand implements CommandExecutor{
 			
 			if(player.hasPermission("fallout.spawn")) {
 				
-				if(plugin.getConfig().getConfigurationSection("spawn") == null) {
-					
-					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "The spawn has not been set yet.");
-					
-				}
 				
 				if(args.length == 0) {
 					player.teleport(player.getWorld().getSpawnLocation());
@@ -44,7 +39,7 @@ public class SpawnCommand implements CommandExecutor{
 				}else if(args.length == 1) {
 
 					Player targetPlayer = Bukkit.getServer().getPlayer(args[0]);
-					targetPlayer.teleport(player.getWorld().getSpawnLocation());
+					targetPlayer.teleport(targetPlayer.getWorld().getSpawnLocation());
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.YELLOW + player.getName() + ChatColor.GREEN + " has sent you to spawn.");
 					
 				}
