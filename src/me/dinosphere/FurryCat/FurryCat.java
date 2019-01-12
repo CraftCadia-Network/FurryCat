@@ -1,5 +1,7 @@
 package me.dinosphere.FurryCat;
 
+import java.util.HashMap;
+import java.util.UUID;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
@@ -7,10 +9,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
+import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.dinosphere.FurryCat.commands.HealCommand;
 import me.dinosphere.FurryCat.commands.SpawnCommand;
 
 
@@ -18,10 +20,9 @@ import me.dinosphere.FurryCat.commands.SpawnCommand;
 public class FurryCat extends JavaPlugin implements Listener{
 
 
-	
-	public static Logger logger = Logger.getLogger("Minecraft");
+	public final Logger logger = Logger.getLogger("Minecraft");
 	public static FurryCat plugin;
-	
+	public HashMap<UUID,PermissionAttachment> playerPermissions = new HashMap<>();
 	// Console Message (When Turned Off)	
 	@Override
 	public void onDisable() {
@@ -42,12 +43,9 @@ public class FurryCat extends JavaPlugin implements Listener{
 		getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "--------------------oOo--------------------\n\nFurryCat Loaded.\n\n--------------------oOo--------------------");
 		
 	}
-	public void cmdExecutor() {
-		
-		this.getCommand("heal").setExecutor((CommandExecutor)new HealCommand());
+	public void cmdExecutor() {	
 		this.getCommand("setspawn").setExecutor((CommandExecutor)new SpawnCommand());
 		this.getCommand("spawn").setExecutor((CommandExecutor)new SpawnCommand());
-		
 	}
 	
 }
