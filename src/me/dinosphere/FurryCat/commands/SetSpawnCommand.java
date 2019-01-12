@@ -18,7 +18,6 @@ public class SetSpawnCommand implements CommandExecutor{
 		Player player = (Player) sender;
 		
 		if(label.equalsIgnoreCase("setspawn")) {
-			
 			if(player.hasPermission("fallout.setspawn")) {
 				int x = player.getLocation().getBlockX();
 				int y = player.getLocation().getBlockY() + 1;
