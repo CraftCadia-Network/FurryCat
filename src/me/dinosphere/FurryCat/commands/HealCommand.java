@@ -24,6 +24,7 @@ public class HealCommand implements CommandExecutor{
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "You have been healed.");
 			}else if(args.length == 1) {
 				
+				@SuppressWarnings("deprecation")
 				Player targetPlayer = player.getServer().getPlayer(args[0]);
 				targetPlayer.setFireTicks(0);
 				targetPlayer.setHealth(20);

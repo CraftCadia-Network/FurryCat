@@ -2,8 +2,6 @@ package me.dinosphere.FurryCat.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -38,6 +36,7 @@ public class SpawnCommand implements CommandExecutor{
 					
 				}else if(args.length == 1) {
 
+					@SuppressWarnings("deprecation")
 					Player targetPlayer = Bukkit.getServer().getPlayer(args[0]);
 					targetPlayer.teleport(targetPlayer.getWorld().getSpawnLocation());
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.YELLOW + player.getName() + ChatColor.GREEN + " has sent you to spawn.");

@@ -22,6 +22,7 @@ public class WhoIsCommand implements CommandExecutor{
 					
 				}else if(args.length == 1) {
 					
+					@SuppressWarnings("deprecation")
 					Player targetPlayer = player.getServer().getPlayer(args[0]);
 					player.sendMessage(ChatColor.LIGHT_PURPLE + "[" + ChatColor.AQUA + "Fallout" + ChatColor.LIGHT_PURPLE + "] " + ChatColor.GREEN + "Stats for " + targetPlayer.getName());
 					player.sendMessage(ChatColor.AQUA + "Current Oxygen Level:" + ChatColor.LIGHT_PURPLE + targetPlayer.getExp());

@@ -1,5 +1,7 @@
 package me.dinosphere.FurryCat.Oxygen;
 
+
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -7,13 +9,15 @@ import me.dinosphere.FurryCat.FurryCat;
 
 public class OxygenTickEvent {
 
-	protected static final Player Player = null;
 	public static FurryCat plugin;
 
 public static void XpTickEvent() {
-	
+
 	new BukkitRunnable() {
-		Player player = (Player);
+		
+		public CommandSender sender;
+
+		Player player = (Player) sender;
 		public void run() {
 	        if(player.getLocation().getBlockY() >= 67) {
 	        	
