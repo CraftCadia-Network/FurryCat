@@ -13,6 +13,7 @@ import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.dinosphere.FurryCat.Oxygen.OxygenTickEvent;
 import me.dinosphere.FurryCat.commands.SetSpawnCommand;
 import me.dinosphere.FurryCat.commands.SpawnCommand;
 import me.dinosphere.FurryCat.commands.WhoIsCommand;
@@ -43,12 +44,14 @@ public class FurryCat extends JavaPlugin implements Listener{
 		cmdExecutor();
 		this.saveDefaultConfig();
 		getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "--------------------oOo--------------------\n\nFurryCat Loaded.\n\n--------------------oOo--------------------");
-		
+		OxygenTickEvent.XpTickEvent();
 	}
 	public void cmdExecutor() {	
 		this.getCommand("setspawn").setExecutor((CommandExecutor)new SetSpawnCommand());
 		this.getCommand("spawn").setExecutor((CommandExecutor)new SpawnCommand());
 		this.getCommand("whois").setExecutor((CommandExecutor)new WhoIsCommand());
 	}
+	
+	
 	
 }
