@@ -8,4 +8,5 @@ commands:
     description: Teleports a player to the set spawn.
   setspawn:
     description: Sets the world spawn.
-    
+  whois:
+    description: Tells you stats about who a player is.

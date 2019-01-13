@@ -15,6 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import me.dinosphere.FurryCat.commands.SetSpawnCommand;
 import me.dinosphere.FurryCat.commands.SpawnCommand;
+import me.dinosphere.FurryCat.commands.WhoIsCommand;
 
 
 
@@ -47,6 +48,7 @@ public class FurryCat extends JavaPlugin implements Listener{
 	public void cmdExecutor() {	
 		this.getCommand("setspawn").setExecutor((CommandExecutor)new SetSpawnCommand());
 		this.getCommand("spawn").setExecutor((CommandExecutor)new SpawnCommand());
+		this.getCommand("whois").setExecutor((CommandExecutor)new WhoIsCommand());
 	}
 	
 }
