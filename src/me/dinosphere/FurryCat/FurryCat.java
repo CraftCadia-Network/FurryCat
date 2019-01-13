@@ -2,9 +2,11 @@ package me.dinosphere.FurryCat;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import me.dinosphere.FurryCat.Oxygen.OxygenTickEvent;
+
 import me.dinosphere.FurryCat.commands.SetSpawnCommand;
 import me.dinosphere.FurryCat.commands.SpawnCommand;
 import me.dinosphere.FurryCat.commands.WhoIsCommand;
@@ -36,8 +38,40 @@ public class FurryCat extends JavaPlugin implements Listener{
 	}
 	
 	public void xpcaller() {
+		/*
+		new BukkitRunnable() {
+			
+			public CommandSender sender;
+
+			Player player = (Player) sender;
+			public void run() {
+		        if(player.getLocation().getBlockY() >= 67) {
+		        	
+		        	player.giveExpLevels((int) -1L);
+		        	
+		        }
+		    }
+		}.runTaskTimer(this, 0, 20);
 		
-		OxygenTickEvent.XpTickEvent();
+		
+	*/
+		
+		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable(){
+			public CommandSender sender;
+
+			Player player = (Player) sender;
+            @Override
+            public void run()
+            {
+            	
+            	
+            	if(player.getLocation().getBlockY() >= 67) {
+		        	
+		        	player.giveExpLevels((int) -1L);
+		        	
+		        }
+            }
+        }, 0, 20);
 		
 	}
 	
