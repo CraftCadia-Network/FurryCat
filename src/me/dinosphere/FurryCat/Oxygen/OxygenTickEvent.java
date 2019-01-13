@@ -9,8 +9,6 @@ import me.dinosphere.FurryCat.FurryCat;
 
 public class OxygenTickEvent {
 
-	public static FurryCat plugin;
-
 public static void XpTickEvent() {
 
 	new BukkitRunnable() {
@@ -25,7 +23,7 @@ public static void XpTickEvent() {
 	        	
 	        }
 	    }
-	}.runTaskTimer(plugin, 0, 20);
+	}.runTaskTimer(FurryCat.plugin, 0, 20);
 	
 	
 }
